@@ -1,18 +1,14 @@
 
-let q1 = prompt('Столица Кыргызстана?')
+let q1 = prompt('Столица Кыргызстана?');
+let point = 0;
 if(q1 === 'Бишкек'){
-    a1 = 1;
-} else {
-    a1 = 0;
+    point++;
 }
 
-let q2 = prompt('Почтовый индекс столицы?')
+let q2 = prompt('Почтовый индекс столицы?');
 if(q2 === '720000'){
-    a2 = 1;
-} else {
-    a2 = 0;
+    point++;
 }
 
-let result = (+a1 + +a2);
-alert(result);
+alert(point);
 
