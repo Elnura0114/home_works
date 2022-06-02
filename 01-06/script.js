@@ -20,3 +20,4 @@ if(data === true){
 }
 
 const result = data === true ? 3 : 5;
+console.log(result);
