@@ -3,7 +3,7 @@ const userSalaries = {
     Sophia : 45000,
     Ellie : 30000
 }
-console.log(userSalaries.Ella + userSalaries.Sophia);
+console.log(userSalaries.Ella, userSalaries.Sophia);
 
 const key = {
     a : 5,
