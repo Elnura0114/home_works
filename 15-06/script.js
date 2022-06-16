@@ -18,8 +18,6 @@ const box = [1, 2, 115, 4, 58, 5 ,7 ,99];
 for (let box2 of box) {
     if (box2 === 4){
         console.log('ЕСТЬ!!!');
-    } else {
-        console.log('Нет такого');
     }
 }
 
