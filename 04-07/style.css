@@ -1,0 +1,10 @@
+.kyrgyzstan_card{
+    background-color: azure;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+}
+
+.lake img{
+    border: 2px solid black;
+}
