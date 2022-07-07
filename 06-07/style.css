@@ -27,3 +27,14 @@
 .background-purple{
     background-color: purple;
 }*/
+
+
+
+
+.notification{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #7fb8d2;
+    padding: 10px;
+}

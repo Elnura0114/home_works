@@ -18,10 +18,24 @@ purple_2.addEventListener('click', () => {
 
 
 
-const showNotification = (toast) => {
-    toast('Hello');
+
+
+
+const btn_2 = document.querySelector('#btn');
+const showNotification = (options) => {
+    let info = document.createElement('div');
+    info.className = 'notification';
+    info.innerText = options.html;
+    document.body.append(info);
+    setTimeout(() => {
+        info.remove();
+    }, 1500)
 }
 
-showNotification();
+btn_2.addEventListener('click', () => {
+    showNotification({
+        html: 'HELLO',
+    });
+})
 
 
