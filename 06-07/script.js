@@ -21,10 +21,12 @@ purple_2.addEventListener('click', () => {
 
 
 
-const btn_2 = document.querySelector('#btn');
+const btn_info = document.querySelector('#info');
+const btn_error = document.querySelector('#error');
+const btn_success = document.querySelector('#success');
 const showNotification = (options) => {
     let info = document.createElement('div');
-    info.className = 'notification';
+    info.className = `notification`, options.style;
     info.innerText = options.html;
     document.body.append(info);
     setTimeout(() => {
@@ -32,10 +34,25 @@ const showNotification = (options) => {
     }, 1500)
 }
 
-btn_2.addEventListener('click', () => {
+btn_info.addEventListener('click', () => {
     showNotification({
-        html: 'HELLO',
+        html: 'Info notification',
+        style: 'info-notification'
     });
+})
+
+btn_error.addEventListener('click', () => {
+    showNotification({
+        html: 'Error notification',
+        style: 'error-notification'
+    })
+})
+
+btn_success.addEventListener('click', () => {
+    showNotification({
+        html: 'Success notification',
+        style: 'success-notification'
+    })
 })
 
 
