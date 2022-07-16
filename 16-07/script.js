@@ -1,4 +1,4 @@
-const usersCard = [
+const users = [
     {
         image_url: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png',
         id: 1,
@@ -278,4 +278,4 @@ const showUsers = (elements) => {
     })
 }
 
-showUsers(usersCard);
+showUsers(users);
