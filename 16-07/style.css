@@ -1,0 +1,19 @@
+.users{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.card{
+    width: 250px;
+    background-color: #F5F5F7;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.card img{
+    width: 100%;
+}

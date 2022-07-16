@@ -26,7 +26,7 @@ const btn_error = document.querySelector('#error');
 const btn_success = document.querySelector('#success');
 const showNotification = (options) => {
     let info = document.createElement('div');
-    info.className = `notification`, options.style;
+    info.className = `notification + options.style`;
     info.innerText = options.html;
     document.body.append(info);
     setTimeout(() => {
