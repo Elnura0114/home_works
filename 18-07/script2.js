@@ -13,8 +13,6 @@ form2.addEventListener('submit', () => {
     const creditTermElement = document.querySelector('#creditTerm');
     const deliveryAddressElement = document.querySelector('#deliveryAddress');
 
-
-
     const creditInformation = {};
 
     creditInformation.organizationName = OrganizationNameElement.value;
@@ -29,13 +27,9 @@ form2.addEventListener('submit', () => {
     creditInformation.creditTerm = creditTermElement.value;
     creditInformation.deliveryAddress = deliveryAddressElement.value;
 
-
-
-    let userInformation = (localStorage);
-
+    let userInformation = localStorage;
 
     const generalInformation = {...creditInformation, ...userInformation};
-
 
     console.log(generalInformation);
 })

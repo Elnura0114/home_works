@@ -3,7 +3,7 @@ const form = document.querySelector('#form');
 form.addEventListener('submit', () => {
     const userSurnameElement = document.querySelector('#userSurname');
     const userNameElement = document.querySelector('#userName');
-    const userSurname2Element = document.querySelector('#userSurname2');
+    const userSecondNameElement = document.querySelector('#userSecondName');
     const userBirthDateElement = document.querySelector('#userBirthDate');
     const userAddressElement = document.querySelector('#userAddress');
     const userPassportElement = document.querySelector('#userPassport');
@@ -14,38 +14,25 @@ form.addEventListener('submit', () => {
     const userBankElement = document.querySelector('#userBank');
     const userActualPlaceResidenceElement = document.querySelector('#userActualPlaceResidence');
 
+    localStorage.setItem('userSurname', userSurnameElement.value);
+    localStorage.setItem('userName', userNameElement.value);
+    localStorage.setItem('userSecondName', userSecondNameElement.value);
+    localStorage.setItem('userBirthDate', userBirthDateElement.value);
+    localStorage.setItem('userAddress', userAddressElement.value);
+    localStorage.setItem('userPassport', userPassportElement.value);
+    localStorage.setItem('userINN', userINNElement.value);
+    localStorage.setItem('userDateReceive', userDateReceiveElement.value);
+    localStorage.setItem('userPhone', userPhoneElement.value);
+    localStorage.setItem('userEmail', userEmailElement.value);
+    localStorage.setItem('userBank', userBankElement.value);
+    localStorage.setItem('userActualPlaceResidence', userActualPlaceResidenceElement.value);
 
-
-    const userSurname = userSurnameElement.value;
-    const userName = userNameElement.value;
-    const userSurname2 = userSurname2Element.value;
-    const userBirthDate = userBirthDateElement.value;
-    const userAddress = userAddressElement.value;
-    const userPassport = userPassportElement.value;
-    const userINN = userINNElement.value;
-    const userDateReceive = userDateReceiveElement.value;
-    const userPhone = userPhoneElement.value;
-    const userEmail = userEmailElement.value;
-    const userBank = userBankElement.value;
-    const userActualPlaceResidence = userActualPlaceResidenceElement.value;
-
-
-
-    localStorage.setItem('userSurname', userSurname);
-    localStorage.setItem('userName', userName);
-    localStorage.setItem('userSurname2', userSurname2);
-    localStorage.setItem('userBirthDate', userBirthDate);
-    localStorage.setItem('userAddress', userAddress);
-    localStorage.setItem('userPassport', userPassport);
-    localStorage.setItem('userINN', userINN);
-    localStorage.setItem('userDateReceive', userDateReceive);
-    localStorage.setItem('userPhone', userPhone);
-    localStorage.setItem('userEmail', userEmail);
-    localStorage.setItem('userBank', userBank);
-    localStorage.setItem('userActualPlaceResidence', userActualPlaceResidence);
-
-
-    window.location.href = 'index2.html';
+    if (userSurnameElement.value && userNameElement.value && userSecondNameElement.value !== ''){
+        window.location.href = 'index2.html';
+    } else {
+        alert('Заполните обязательные поля!');
+        localStorage.clear();
+    }
 })
 
 
