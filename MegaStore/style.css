@@ -205,3 +205,16 @@ input{
     border-radius: 4px;
     color: white;
 }
+
+.required{
+    border: 2px solid red;
+}
+
+.notice{
+    font-size: 13px;
+    color: red;
+    font-family: 'Sora', sans-serif;
+    display: inline-flex;
+    margin-top: 55px;
+    padding: 1px 96px 5px 5px;
+}
