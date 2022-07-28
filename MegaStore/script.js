@@ -35,13 +35,12 @@ form.addEventListener('submit', () => {
         if (elements[i].hasAttribute('data-required')){
             if (elements[i].value !== ''){
                 elements[i].classList.remove('required');
-                delete window['notification'];
             }
         }
 
         elements[i].addEventListener('change', () => {
             elements[i].classList.remove('required');
-            delete window['notification'];
+            event.stopPropagation();
         });
     }
 
