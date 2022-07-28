@@ -16,12 +16,6 @@ form.addEventListener('submit', () => {
 
     const elements = document.querySelectorAll('#form input, #form select, #form textarea');
 
-    /*const createErrorMessage = () => {
-        let notification = document.createElement('p');
-        notification.innerText = 'Обязательное поле';
-        notification.classList.add('notice');
-    }*/
-
     for (let i = 0; i < elements.length; i++) {
         if (elements[i].hasAttribute('data-required')) {
             if (elements[i].value === '') {
@@ -30,11 +24,6 @@ form.addEventListener('submit', () => {
                 notification.innerText = 'Обязательное поле';
                 notification.classList.add('notice');
                 elements[i].after(notification);
-            }
-        }
-        if (elements[i].hasAttribute('data-required')){
-            if (elements[i].value !== ''){
-                elements[i].classList.remove('required');
             }
         }
 
